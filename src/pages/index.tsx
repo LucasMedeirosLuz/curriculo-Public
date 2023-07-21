@@ -3,7 +3,7 @@ import Link from "next/link";
 const Home = () => {
   return (
     <main>
-      <h1>Hello World</h1>
+      <h1>Ola Mundo</h1>
       <Link 
         href="/loginPage"
         className="Link"

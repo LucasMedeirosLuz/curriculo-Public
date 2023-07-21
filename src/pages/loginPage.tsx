@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+const button = () => {
+
+}
+
 const loginPage = () => {
   return (
     <main>
@@ -22,7 +26,11 @@ const loginPage = () => {
           href="/filmes"
         >
           <button
-          type="button">
+            type="button"
+            onClick={ button }
+            disabled={ !button }
+            className="loginButton"
+          >
             entrar
           </button>
         </Link>
