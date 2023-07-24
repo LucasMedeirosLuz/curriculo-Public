@@ -1,8 +1,13 @@
+import Head from "next/head";
 import Link from "next/link"
 
 const erro = () => {
   return (
-    <div>
+    <>
+    <Head>
+      <title>404 | LucasMLuz</title>
+    </Head>
+    <main>
       <div>
         <h1>404 \ ERRO</h1>
         <p>Pagina não encontrada</p>
@@ -11,7 +16,8 @@ const erro = () => {
         <p>Ir para pagina inicial</p>
         <Link href="/">Inicio</Link>
       </div>
-    </div>
+    </main>
+    </>
   )
 }
 

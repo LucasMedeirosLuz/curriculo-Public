@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 const button = () => {
 
@@ -6,6 +7,10 @@ const button = () => {
 
 const loginPage = () => {
   return (
+    <>
+    <Head>
+      <title>Pagina de Login | LucasMLuz</title>
+    </Head>
     <main>
       <div>
       <Link 
@@ -36,6 +41,7 @@ const loginPage = () => {
         </Link>
       </div>
     </main>
+    </>
   )
 }
 

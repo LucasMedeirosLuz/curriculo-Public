@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 html, body {
-  background-color: rgb(48, 48, 48);
+  background-color: #0B1A2F;
+  color: #DAE1E9;
   margin: 25px;
 }
 
 .Link {
-  background-color: rgb(250, 250, 250);
+  background-color: #DAE1E9;
   
   color: black;
 }
@@ -22,7 +23,7 @@ html, body {
   padding: 10px;
   justify-content: center;
   gap: 10px;
-  background-color: rgb(179, 179, 179);
+  background-color: #132C4D;
 }
 
 .inputLogin {
