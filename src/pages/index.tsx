@@ -1,5 +1,6 @@
+import AboutMe from "@/components/home/AboutMe";
 import Head from "next/head";
-import Link from "next/link";
+
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       </Head>
       <main>
         <h1>Ola Mundo</h1>
+        <AboutMe />
       </main>
     </>
   )

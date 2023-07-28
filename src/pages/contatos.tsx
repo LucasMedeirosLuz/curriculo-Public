@@ -12,19 +12,25 @@ const Contatos = () => {
         <li>
           <span>E-mail</span>
           <div>
-            <a href="mailto:lucasdmluz@hotmail.com">lucasdmluz@hotmail.com</a>
+            <a href="mailto:lucasdmluz@hotmail.com">
+              lucasdmluz@hotmail.com
+            </a>
           </div>
         </li>
         <li>
           <span>GitHub</span>
           <div>
-            <a href="https://github.com/LucasMedeirosLuz">https://github.com/LucasMedeirosLuz</a>
+            <a href="https://github.com/LucasMedeirosLuz">
+              https://github.com/LucasMedeirosLuz
+            </a>
           </div>
         </li>
         <li>
           <span>Linkedin</span>
           <div>
-            <a href="https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/">https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/</a>
+            <a href="https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/">
+              https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/
+            </a>
           </div>
         </li>
       </ul>
