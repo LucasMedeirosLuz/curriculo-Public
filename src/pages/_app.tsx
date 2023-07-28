@@ -1,6 +1,7 @@
 
 import { Layout } from '@/components/commons/Layout'
 import '@/styles/globals.css'
+import '@/styles/loginPage.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {

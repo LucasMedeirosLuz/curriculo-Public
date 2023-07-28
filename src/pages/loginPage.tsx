@@ -21,10 +21,14 @@ const loginPage = () => {
         </Link>
       </div> 
       <div className="loginContainer">
-        <label htmlFor="Email">Email :</label>
+        <div>
+        <label htmlFor="Email">Email</label>
         <input type="text" id="Email" name="Email" className="inputLogin"/>
-        <label htmlFor="senhaLogin">Senha :</label>
+        </div>
+        <div>
+        <label htmlFor="senhaLogin">Senha</label>
         <input type="password" id="senhaLogin" name="password" className="inputLogin"/>
+        </div>
       </div>
       <div>
         <Link

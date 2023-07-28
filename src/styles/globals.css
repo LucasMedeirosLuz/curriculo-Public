@@ -13,21 +13,3 @@ html, body {
   
   color: black;
 }
-
-.loginContainer {
-  display: flex;
-  border-radius: 8px;
-  width: 800px;
-  margin: auto;
-  border: 2px solid black;
-  padding: 10px;
-  justify-content: center;
-  gap: 10px;
-  background-color: #132C4D;
-}
-
-.inputLogin {
-  border-radius: 5px;
-  border:2px solid black;
-}
-
