@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
+import { log } from "console";
 
 const button = () => {
-
+  console.log('Ola')
 }
 
 const loginPage = () => {
@@ -29,20 +30,14 @@ const loginPage = () => {
         <label htmlFor="senhaLogin">Senha</label>
         <input type="password" id="senhaLogin" name="password" className="inputLogin"/>
         </div>
-      </div>
-      <div>
-        <Link
-          href="/filmes"
+        <button
+          className="loginButton"
+          type="button"
+          onClick={ button }
+          disabled={ !button }
         >
-          <button
-            type="button"
-            onClick={ button }
-            disabled={ !button }
-            className="loginButton"
-          >
-            entrar
-          </button>
-        </Link>
+          Entrar
+        </button>
       </div>
     </main>
     </>
