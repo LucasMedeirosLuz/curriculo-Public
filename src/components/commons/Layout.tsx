@@ -1,5 +1,12 @@
 import { ReactNode } from "react";
 import { Header } from "./header";
+import { Arvo } from "next/font/google";
+
+const arvo = Arvo({
+  subsets: ['latin'],
+  weight: '400'
+
+});
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,9 +14,9 @@ interface LayoutProps {
 
 export const Layout = ({ children } : LayoutProps) => {
   return (
-    <>
-    <Header />
-    {children}
-    </>
-  )
+    <div className={arvo.className}>
+      <Header />
+      {children}
+    </div>
+  );
 };

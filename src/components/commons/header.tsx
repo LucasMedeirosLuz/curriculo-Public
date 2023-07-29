@@ -1,11 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Josefin_Sans } from 'next/font/google'
+
+const josefin_sans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: '500',
+});
 
 export const Header = () => {
   return (
-    <header>
+    <header className={josefin_sans.className}>
       <Link href="/">
-        <Image src="/lampada.png" alt="icon uma lampada" width={'100'} height={'100'}/>
+        <Image src="/lampada.png" alt="icon uma lampada" width={'55'} height={'55'}/>
       </Link>
       <nav>
         <Link href="/">Sobre mim</Link>

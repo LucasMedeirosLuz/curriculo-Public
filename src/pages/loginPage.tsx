@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Head from "next/head";
-import { log } from "console";
 
 const button = () => {
   console.log('Ola')
