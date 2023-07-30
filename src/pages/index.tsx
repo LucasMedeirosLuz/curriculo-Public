@@ -8,10 +8,10 @@ const Home = () => {
       <Head>
         <title>Sobre mim | LucasMLuz</title>
       </Head>
-      <main>
+      <div className="py-12 px-6 md:px-32 space-y-10 md: space-y-20">
         <h1>Ola Mundo</h1>
         <AboutMe />
-      </main>
+      </div>
     </>
   )
 }

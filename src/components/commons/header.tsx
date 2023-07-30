@@ -9,11 +9,13 @@ const josefin_sans = Josefin_Sans({
 
 export const Header = () => {
   return (
-    <header className={josefin_sans.className}>
+    <header className={`${josefin_sans.className}
+      bg-l-blue-5 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20`
+    }>
       <Link href="/">
         <Image src="/lampada.png" alt="icon uma lampada" width={'55'} height={'55'}/>
       </Link>
-      <nav>
+      <nav className="hidden md:flex items-center gap-10 text-md">
         <Link href="/">Sobre mim</Link>
         <Link href="/contatos">Contatos</Link>
         <Link href="/loginPage">Login Page</Link>
