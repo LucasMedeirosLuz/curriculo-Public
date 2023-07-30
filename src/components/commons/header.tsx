@@ -13,7 +13,7 @@ export const Header = () => {
       bg-l-blue-5 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20`
     }>
       <Link href="/">
-        <Image src="/lampada.png" alt="icon uma lampada" width={'55'} height={'55'}/>
+        <Image src="/lampada.png" alt="icon uma lampada" width={'35'} height={'35'}/>
       </Link>
       <nav className="hidden md:flex items-center gap-10 text-md">
         <Link href="/">Sobre mim</Link>

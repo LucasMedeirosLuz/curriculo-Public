@@ -19,6 +19,13 @@ module.exports = {
         'l-blue-4': '#12233F',
         'l-blue-5': '#0B1A2F',
       },
+      width: {
+        120: '30rem',
+        125: '31.25rem',
+      },
+      height: {
+        125: '31.25rem',
+      },
     },
   },
   plugins: [],
