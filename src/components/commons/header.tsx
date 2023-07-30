@@ -18,8 +18,7 @@ export const Header = () => {
       <nav className="hidden md:flex items-center gap-10 text-md">
         <Link href="/">Sobre mim</Link>
         <Link href="/contatos">Contatos</Link>
-        <Link href="/loginPage">Login Page</Link>
-        <Link href="/">Projeto2</Link>
+        <Link href="/projetos">Projetos</Link>
       </nav>
     </header>
   )
