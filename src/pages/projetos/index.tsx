@@ -8,7 +8,10 @@ const Projetos = () => {
       <title>Projetos | LucasMLuz</title>
     </Head>
     <h1>Ola Mundo</h1>
-    <Link href="/projetos/pokemon">Pokemon</Link>
+    <div>
+      <Link href="/projetos/pokemon">Pokemon</Link>
+      <Link href="/projetos/loginPage">Pagina de Login</Link>
+    </div>
     </>
   )
 };
