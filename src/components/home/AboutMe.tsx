@@ -42,8 +42,8 @@ const AboutMe = () => {
         <Image
           src="/fotoPerfil.jpg"
           alt="Foto de perfil Lucas. Homem branco de oculos e baraba"
-          width={500}
-          height={500}
+          width={300}
+          height={300}
           unoptimized
           className="rounded-full"
         />
