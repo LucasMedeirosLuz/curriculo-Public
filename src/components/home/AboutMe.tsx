@@ -15,8 +15,7 @@ const AboutMe = () => {
       <div className="text-l-blue-1 flex flex-col item-center xl:item-start gap-4 w-full xl:w-120">
         <h1 className="text-3xl sm:text-7xl xl:leading-[5rme]"
         >Prazer, sou&nbsp;
-        <span className="font-bold"
-        >Lucas</span>
+        <strong className="font-bold">Lucas</strong>
         </h1>
         <div className="mb-12">
         <h2 className={`${josefin_sans} mb-12`}>
@@ -48,7 +47,7 @@ const AboutMe = () => {
           className="rounded-full"
         />
         <p className="p-4 w-fit text-base leading-tight bg-l-blue-2 rounded-xl text-black absolute -bottom-[0.75rem] sm:botton-3">
-          <span className="text-3xl">0</span>
+          <strong className="text-3xl">0</strong>
           <br />
           Anos de experiência.
         </p>

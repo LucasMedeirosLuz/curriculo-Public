@@ -15,7 +15,7 @@ const erro = () => {
     </Head>
     <div className="flex flex-col items-center text-center mt-12 md:mt-24 gap-8 md:gap-4 px-6 md:px-32">
       <h1 className="text-5xl md:text-7xl font-bold" >404 \ ERRO</h1>
-      <p className="flex flex-col gap-8 md:gap-4">
+      <p className="flex flex-col gap-8 md:gap-4 md:text-xl">
         <span>Pagina não encontrada</span>
         <span>Ir para pagina inicial</span>
       </p>

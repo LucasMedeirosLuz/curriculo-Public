@@ -15,7 +15,7 @@ export const Header = () => {
       <Link href="/">
         <Image src="/lampada.png" alt="icon uma lampada" width={'35'} height={'35'}/>
       </Link>
-      <nav className="hidden md:flex items-center gap-10 text-md">
+      <nav className="flex items-center gap-4 md:gap-10 text-md md:text-xl">
         <Link href="/">Sobre mim</Link>
         <Link href="/contatos">Contatos</Link>
         <Link href="/projetos">Projetos</Link>
