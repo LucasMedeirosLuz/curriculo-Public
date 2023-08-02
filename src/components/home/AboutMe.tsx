@@ -39,7 +39,7 @@ const AboutMe = () => {
       </div>
       <div className="relative">
         <Image
-          src="/fotoPerfil.jpg"
+          src="../fotoPerfil.jpg"
           alt="Foto de perfil Lucas. Homem branco de oculos e baraba"
           width={300}
           height={300}
