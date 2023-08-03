@@ -1,3 +1,6 @@
 .h1poke {
-  background-color: black;
+  color: black;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 35px;
 }

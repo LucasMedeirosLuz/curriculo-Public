@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Card from "@/components/pokemon/card";
+
 
 // const apipoke = async () => {
 //   const maxPokemons = 251
@@ -23,7 +25,7 @@ export async function getStaticProps() {
   data.results.forEach((item: { id: any; }, index: number) => {
     item.id = index + 1
   })
-
+  // console.log(data);
   return {
     props: {
       pokemons: data.results,
@@ -31,18 +33,20 @@ export async function getStaticProps() {
   }
 }
 
-const pokemon = ({ pokemons }) => {
+const pokemon = ({pokemons}) => {
   return(
     <>
     <Head>
       <title>Pokemon | LucasMLuz</title>
     </Head>
-    <h1 className="h1poke">Ola Mundo Pokoemn</h1>
-    <ul>
-      { pokemons.map((pokemon) => (
-        <li key={pokemon.id}>{pokemon.name}</li>
-      )) }
-    </ul>
+    <div>
+    <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
+    </div>
+    <div>
+      {pokemons.map((pokemon) => (
+        <Card key={pokemon.id} pokemon={pokemon} />
+      ))}
+    </div>
     </>
   )
 };
