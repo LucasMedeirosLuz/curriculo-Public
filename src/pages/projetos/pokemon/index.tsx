@@ -27,18 +27,24 @@ export async function getStaticProps() {
   return {
     props: {
       pokemons: data.results,
-    } 
+    },
   }
-
 }
 
-export default function pokeindex() {
+const pokemon = ({ pokemons }) => {
   return(
     <>
     <Head>
       <title>Pokemon | LucasMLuz</title>
     </Head>
     <h1 className="h1poke">Ola Mundo Pokoemn</h1>
+    <ul>
+      { pokemons.map((pokemon) => (
+        <li key={pokemon.id}>{pokemon.name}</li>
+      )) }
+    </ul>
     </>
   )
 };
+
+export default pokemon;
