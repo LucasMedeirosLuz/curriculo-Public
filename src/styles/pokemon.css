@@ -31,5 +31,13 @@
   border: 2px solid black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+}
+
+.buttonpokemon {
+  background-color: #DAE1E9;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
