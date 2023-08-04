@@ -42,7 +42,7 @@ const pokemon = ({pokemons}) => {
     <div>
     <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
     </div>
-    <div>
+    <div className="containercard">
       {pokemons.map((pokemon) => (
         <Card key={pokemon.id} pokemon={pokemon} />
       ))}
