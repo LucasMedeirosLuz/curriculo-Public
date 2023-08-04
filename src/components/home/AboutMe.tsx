@@ -39,7 +39,7 @@ const AboutMe = () => {
       </div>
       <div className="relative">
         <Image
-          src="/fotoperfil.jpg"
+          src="https://avatars.githubusercontent.com/u/97979790?v=4"
           alt="Foto de perfil Lucas. Homem branco de oculos e baraba"
           width={300}
           height={300}
