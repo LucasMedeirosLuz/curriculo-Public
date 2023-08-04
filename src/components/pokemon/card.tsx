@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Card = ({pokemon}) => {
   return (
-    <div className="card">
+    <div className={`${"card"} text-md relative`}>
       <Image
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
         width={110}
@@ -11,7 +11,7 @@ const Card = ({pokemon}) => {
         alt={`Imagem do Pokemon ${pokemon.name}`}
         className="imagepokemon"
       />
-      <p># {pokemon.id}</p>
+      <p className="flex bg-l-blue-4 rounded-full p-1 absolute bottom-[3.125rem]"># {pokemon.id}</p>
       <h3>{pokemon.name}</h3>
       <Link
         href={`/pokemon/${pokemon.id}`}
