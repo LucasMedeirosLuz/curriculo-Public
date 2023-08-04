@@ -39,13 +39,15 @@ const pokemon = ({pokemons}) => {
     <Head>
       <title>Pokemon | LucasMLuz</title>
     </Head>
-    <div>
-    <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
-    </div>
-    <div className="containercard">
-      {pokemons.map((pokemon) => (
-        <Card key={pokemon.id} pokemon={pokemon} />
-      ))}
+    <div className="mx-0 md:mx-8">
+      <div>
+      <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
+      </div>
+      <div className="containercard">
+        {pokemons.map((pokemon) => (
+          <Card key={pokemon.id} pokemon={pokemon} />
+        ))}
+      </div>
     </div>
     </>
   )
