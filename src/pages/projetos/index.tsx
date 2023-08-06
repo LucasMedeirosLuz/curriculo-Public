@@ -7,10 +7,10 @@ const Projetos = () => {
     <Head>
       <title>Projetos | LucasMLuz</title>
     </Head>
-    <h1>Ola Mundo</h1>
-    <div>
-      <Link href="/projetos/pokemon">Pokemon</Link>
-      <Link href="/projetos/loginPage">Pagina de Login</Link>
+    <h1 className="flex text-4xl justify-center my-6">Projetos</h1>
+    <div className="flex justify-center text-2xl gap-10">
+      <Link className="bg-l-blue-5 rounded p-2" href="/projetos/pokemon">Pokemon</Link>
+      <Link className="bg-l-blue-5 rounded p-2" href="/projetos/loginPage">Pagina de Login</Link>
     </div>
     </>
   )
