@@ -30,9 +30,9 @@ const pokemon = ({pokemons}) => {
       <div>
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
       </div>
-      <div className="divSearch">
+      <div className={`${"divSearch"} ml-11`}>
         <label htmlFor="search">Buscar Pokemon</label>
-        <input type="search" className="inputsearch"/>
+        <input type="search" className={`${"inputsearch"} flex text-black rounded`}/>
       </div>
       <div className="containercard">
         {pokemons.map((pokemon) => (
