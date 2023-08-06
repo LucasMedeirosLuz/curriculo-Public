@@ -1,19 +1,6 @@
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
 
-
-// const apipoke = async () => {
-//   const maxPokemons = 251
-//   const api = 'https://pokeapi.co/api/v2/pokemon/'
-
-//   const res = await fetch(api, { cache: 'no-store' })
-//   const data = await res.json()
-//   console.log(res)
-//   console.log(data);
-  
-// }
-// apipoke();
-
 export async function getStaticProps() {
 
   const maxPokemons = 251
@@ -42,6 +29,10 @@ const pokemon = ({pokemons}) => {
     <div className="mx-0 md:mx-8">
       <div>
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
+      </div>
+      <div className="divSearch">
+        <label htmlFor="search">Buscar Pokemon</label>
+        <input type="search" className="inputsearch"/>
       </div>
       <div className="containercard">
         {pokemons.map((pokemon) => (
