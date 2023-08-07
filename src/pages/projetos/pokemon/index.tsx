@@ -1,5 +1,15 @@
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
+import { useEffect } from "react";
+// import search from "@/components/pokemon/search";
+
+// let inputsearch = document.querySelector("input[type='search']");
+
+const search = (value) => {
+  let inputsearch = value
+
+  console.log(inputsearch);
+};
 
 export async function getStaticProps() {
 
@@ -20,6 +30,8 @@ export async function getStaticProps() {
   }
 }
 
+
+
 const pokemon = ({pokemons}) => {
   return(
     <>
@@ -32,7 +44,12 @@ const pokemon = ({pokemons}) => {
       </div>
       <div className={`${"divSearch"} ml-11`}>
         <label htmlFor="search">Buscar Pokemon</label>
-        <input type="search" className={`${"inputsearch"} flex text-black rounded`}/>
+        <input
+          type='search'
+          id="inputsearch"
+          className="flex text-black rounded"
+          onChange={(e) => search(e.target.value)}
+        />
       </div>
       <div className="containercard">
         {pokemons.map((pokemon) => (
