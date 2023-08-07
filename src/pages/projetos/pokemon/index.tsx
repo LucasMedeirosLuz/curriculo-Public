@@ -1,15 +1,5 @@
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
-import { useEffect } from "react";
-// import search from "@/components/pokemon/search";
-
-// let inputsearch = document.querySelector("input[type='search']");
-
-const search = (value) => {
-  let inputsearch = value
-
-  console.log(inputsearch);
-};
 
 export async function getStaticProps() {
 
@@ -30,9 +20,34 @@ export async function getStaticProps() {
   }
 }
 
+// const search = (value) => {
+//   if (value === '') {
+//     console.log('nada aqui');
+//   } if (value !== '') {
+//     console.log(value);
+//   }  
+// };
+
 
 
 const pokemon = ({pokemons}) => {
+  const search = (value) => {
+    if (value === '') {
+      console.log('nada aqui');
+    } if (value !== '') {
+      console.log(value);
+    } 
+
+    let poke = pokemons;
+
+    let result = poke.filter((item) => 
+      item.name.toLowerCase().includes(value.toLowerCase())
+    )
+    
+    console.log(result);
+    
+  };
+
   return(
     <>
     <Head>
