@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
+import IndexSearch from "@/components/pokemon/searchBar";
 
 export async function getStaticProps() {
 
@@ -12,7 +13,7 @@ export async function getStaticProps() {
   data.results.forEach((item: { id: any; }, index: number) => {
     item.id = index + 1
   })
-  // console.log(data);
+
   return {
     props: {
       pokemons: data.results,
@@ -25,29 +26,17 @@ export async function getStaticProps() {
 //     console.log('nada aqui');
 //   } if (value !== '') {
 //     console.log(value);
-//   }  
+//   }
+
+//   poke = poke.filter((item) => 
+//     item.name.toLowerCase().includes(value.toLowerCase())
+//   )
 // };
 
 
 
-const pokemon = ({pokemons}) => {
-  const search = (value) => {
-    if (value === '') {
-      console.log('nada aqui');
-    } if (value !== '') {
-      console.log(value);
-    } 
-
-    let poke = pokemons;
-
-    let result = poke.filter((item) => 
-      item.name.toLowerCase().includes(value.toLowerCase())
-    )
-    
-    console.log(result);
-    
-  };
-
+const pokemon = (props) => {
+  
   return(
     <>
     <Head>
@@ -57,17 +46,11 @@ const pokemon = ({pokemons}) => {
       <div>
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
       </div>
-      <div className={`${"divSearch"} ml-11`}>
-        <label htmlFor="search">Buscar Pokemon</label>
-        <input
-          type='search'
-          id="inputsearch"
-          className="flex text-black rounded"
-          onChange={(e) => search(e.target.value)}
-        />
+      <div>
+        <IndexSearch />
       </div>
       <div className="containercard">
-        {pokemons.map((pokemon) => (
+        {props.pokemons.map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
