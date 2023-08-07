@@ -13,25 +13,26 @@ import React, {useState} from "react";
 //   )
 // };
 
-const IndexSearch = () => {
+const IndexSearch = ({ setResult }) => {
   
   const [input, setInput] = useState("");
 
-  const fetchData = (value) => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=251")
-    .then((response) => response.json())
-    .then((json) => {
-      const result = json.results.filter((item) => 
-        item.name.toLowerCase().includes(value.toLowerCase())
-      );
-      // console.log(result);
-      
-     })
-  };
+  // const fetchData = (value) => {
+  //   fetch("https://pokeapi.co/api/v2/pokemon/?limit=251")
+  //   .then((response) => response.json())
+  //   .then((json) => {
+  //     const result = json.results.filter((item) => 
+  //       item.name.toLowerCase().includes(value.toLowerCase())
+  //     );
+
+  //     console.log(result);
+  //    })
+  // };
 
   const handleChange = (value) => {
     setInput(value);
-    fetchData(value);
+    // fetchData(value);
+    setResult(value);
   };
 
   return (

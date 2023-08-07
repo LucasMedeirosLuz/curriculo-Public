@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
 import IndexSearch from "@/components/pokemon/searchBar";
+import { useState } from "react";
 
 export async function getStaticProps() {
 
@@ -36,6 +37,16 @@ export async function getStaticProps() {
 
 
 const pokemon = (props) => {
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [result, setResult] = useState('');
+
+  const search = () => {
+    let poke = props.pokemons;
+      poke = poke.filter((item) => item.name.toLowerCase().includes(result.toLowerCase()));
+    console.log(poke);
+        
+  };
   
   return(
     <>
@@ -47,10 +58,10 @@ const pokemon = (props) => {
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
       </div>
       <div>
-        <IndexSearch />
+        <IndexSearch setResult={setResult}/>
       </div>
       <div className="containercard">
-        {props.pokemons.map((pokemon) => (
+        {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
           <Card key={pokemon.id} pokemon={pokemon} />
         ))}
       </div>
