@@ -1,30 +1,18 @@
-export async function pokemonTypes() {
-
-  const res = await fetch("https://pokeapi.co/api/v2/type")
-  const data = await res.json()
-
-  console.log(data.results);
-  
-
-  return {
-    props: {
-      types: data.results,
-    },
-  }
-}
-
-pokemonTypes();
-
-
-const FilterType = (props) => {
-
+const FilterType = () => {
+  const types = [
+    {name: "normal"},{name: "fire"},{name: "water"},{name: "electric"},{name: "grass"},{name: "ice"},
+    {name: "fighting"},{name: "poison"},{name: "ground"},{name: "flying"},{name: "psychic"},{name: "bug"},
+    {name: "rock"},{name: "ghost"},{name: "dragon"},{name: "dark"},{name: "steel"},{name: "fairy"},
+  ]
   return (
     <>
-    <div className="ml-11 my-8 flex content-center">
-      {/* <div>{types.map((item) => ())}</div> */}
-      <button type="button" onClick={(a) => console.log(props.types)
-      }>oiio</button>
-    </div>
+      <div>
+        <ol>
+         {types.map((item, id) => (<li onClick={(a) => console.log(item.name)} key={id} className={`type_${item.name} text-black`}>
+          {item.name}
+         </li>))}
+        </ol>
+      </div>
     </>
   );
 };
