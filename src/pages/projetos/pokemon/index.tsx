@@ -37,8 +37,10 @@ const pokemon = (props) => {
       <div>
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
       </div>
-      <div className="flex content-center">
+      <div className="flex content-center justify-center">
         <IndexSearch setResult={setResult}/>
+      </div>
+      <div className="flex justify-center ">
         <FilterType />
       </div>
       <div className="containercard">
