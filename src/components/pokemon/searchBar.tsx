@@ -1,18 +1,5 @@
 import React, {useState} from "react";
 
-
-// const search = (value) => {
-//   if (value === '') {
-//     console.log('nada aqui');
-//   } if (value !== '') {
-//     console.log(value);
-//   }
-
-//   poke = poke.filter((item) => 
-//     item.name.toLowerCase().includes(value.toLowerCase())
-//   )
-// };
-
 const IndexSearch = ({ setResult }) => {
   
   const [input, setInput] = useState("");
@@ -31,7 +18,6 @@ const IndexSearch = ({ setResult }) => {
 
   const handleChange = (value) => {
     setInput(value);
-    // fetchData(value);
     setResult(value);
   };
 

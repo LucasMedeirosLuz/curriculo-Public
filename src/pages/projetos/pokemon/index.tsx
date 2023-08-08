@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
 import IndexSearch from "@/components/pokemon/searchBar";
-import { useState } from "react";
+import FilterType from "@/components/pokemon/filtertype";
 
 export async function getStaticProps() {
 
@@ -22,31 +23,10 @@ export async function getStaticProps() {
   }
 }
 
-// const search = (value) => {
-//   if (value === '') {
-//     console.log('nada aqui');
-//   } if (value !== '') {
-//     console.log(value);
-//   }
-
-//   poke = poke.filter((item) => 
-//     item.name.toLowerCase().includes(value.toLowerCase())
-//   )
-// };
-
-
-
 const pokemon = (props) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [result, setResult] = useState('');
-
-  const search = () => {
-    let poke = props.pokemons;
-      poke = poke.filter((item) => item.name.toLowerCase().includes(result.toLowerCase()));
-    console.log(poke);
-        
-  };
   
   return(
     <>
@@ -57,8 +37,9 @@ const pokemon = (props) => {
       <div>
       <h1 className="h1poke">Poke<span className="text-red-500">Dex</span></h1>
       </div>
-      <div>
+      <div className="flex content-center">
         <IndexSearch setResult={setResult}/>
+        <FilterType />
       </div>
       <div className="containercard">
         {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
