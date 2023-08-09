@@ -8,12 +8,12 @@ const FilterType = () => {
   ]
   return (
     <>
-    <div>
+    <div className="md:invisible">
       <button>
         <TypeIcon className="" />
       </button>
     </div>
-    <div className="flex justify-center flex-wrap">
+    <div className="flex justify-center flex-wrap content-center">
       {types.map((item, id) => (<button key={id}
       className={`type_${item.name} flex text-black rounded-lg p-1 justify-center m-1`}>
       {item.name}

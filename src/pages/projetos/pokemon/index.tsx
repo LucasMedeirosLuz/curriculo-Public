@@ -50,12 +50,12 @@ const pokemon = (props) => {
       <div className="flex content-center justify-center">
         <IndexSearch setResult={setResult}/>
       </div>
-      <div className="p-1 md:hidden">
+      <div className="p-1 md:invisible flex justify-center bg-l-blue-5 mx-[40%]">
         <button>
           <TypeIcon />
         </button>
       </div>
-      <div className="flex justify-center invisible md:visible">
+      <div className="flex justify-center invisible md:visible content-center">
         <FilterType />
       </div>
       <div className="containercard">
