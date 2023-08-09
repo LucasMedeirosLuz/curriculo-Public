@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
 import IndexSearch from "@/components/pokemon/searchBar";
 import FilterType from "@/components/pokemon/filtertype";
+import { TypeIcon } from "@/components/icons/typesmenu";
 
 export async function getStaticProps() {
 
@@ -27,7 +28,16 @@ const pokemon = (props) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [result, setResult] = useState('');
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const openMenu = useCallback(() => {
+    setIsMenuOpen(true)
+  }, []);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuOpen(false)
+  }, []);
+
   return(
     <>
     <Head>
@@ -40,7 +50,12 @@ const pokemon = (props) => {
       <div className="flex content-center justify-center">
         <IndexSearch setResult={setResult}/>
       </div>
-      <div className="flex justify-center ">
+      <div className="p-1 md:hidden">
+        <button>
+          <TypeIcon />
+        </button>
+      </div>
+      <div className="flex justify-center invisible md:visible">
         <FilterType />
       </div>
       <div className="containercard">
