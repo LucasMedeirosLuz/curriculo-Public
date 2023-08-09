@@ -6,7 +6,7 @@ const FilterType = () => {
   ]
   return (
     <div className="flex justify-center flex-wrap">
-      {types.map((item, id) => (<span onClick={(a) => console.log(item.name)} key={id}
+      {types.map((item, id) => (<span key={id}
       className={`type_${item.name} flex text-black rounded-lg p-1 justify-center m-1`}>
       {item.name}
       </span>))}

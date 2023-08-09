@@ -23,7 +23,7 @@ const IndexSearch = ({ setResult }) => {
 
   return (
     <>
-    <div className={`${"divSearch"} ml-11 my-8 flex content-center`}>
+    <div className={`${"divSearch"} my-8 flex content-center`}>
         <input
           type="search"
           placeholder="Buscar Pokemon ..."
