@@ -3,6 +3,7 @@ import Head from "next/head";
 import Card from "@/components/pokemon/card";
 import IndexSearch from "@/components/pokemon/searchBar";
 import FilterType from "@/components/pokemon/filtertype";
+import FilterTypemd from "@/components/pokemon/filtertypesmd";
 import { TypeIcon } from "@/components/icons/typesmenu";
 
 export async function getStaticProps() {
@@ -50,13 +51,14 @@ const pokemon = (props) => {
       <div className="flex content-center justify-center">
         <IndexSearch setResult={setResult}/>
       </div>
-      <div className="p-1 md:invisible flex justify-center bg-l-blue-5 mx-[40%]">
-        <button>
+      <div className="p-1 flex justify-center bg-l-blue-5 mx-[40%] md:hidden">
+        <button onClick={openMenu}>
           <TypeIcon />
         </button>
       </div>
-      <div className="flex justify-center invisible md:visible content-center">
-        <FilterType />
+      <div>
+        <FilterType isVisible={isMenuOpen} onClose={closeMenu}/>
+        <FilterTypemd />
       </div>
       <div className="containercard">
         {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
