@@ -30,7 +30,7 @@ const pokemon = (props) => {
 
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [type, setTypefilter] = useState('');
+  const [type, setType] = useState('');
 
 
   const openMenu = useCallback(() => {
@@ -41,7 +41,32 @@ const pokemon = (props) => {
     setIsMenuOpen(false)
   }, []);
 
-  console.log(type);
+  const filterType = async() => {
+
+    const res = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
+    const data = await res.json();
+
+    console.log(data);
+
+    let takeId = [];
+    let filter = [];
+    
+
+    if (type !== '') {
+      takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
+      filter = takeId.filter((item) => item < 251);
+    }
+    
+
+    // const takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
+
+    // const filter = takeId.filter((item) => item < 251)
+    
+    console.log(filter);
+    
+  };
+
+  filterType();
   
 
   return(
@@ -61,9 +86,9 @@ const pokemon = (props) => {
           <TypeIcon />
         </button>
       </div>
-      <div>
-        <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={setTypefilter} />
-        <FilterTypemd setTypeButton={setTypefilter}/>
+      <div className="inset-0">
+        <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={setType} />
+        <FilterTypemd setTypeButton={setType}/>
       </div>
       <div className="containercard">
         {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
