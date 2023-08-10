@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useCallback, useState } from "react";
 import Head from "next/head";
 import Card from "@/components/pokemon/card";
@@ -27,7 +28,6 @@ export async function getStaticProps() {
 
 const pokemon = (props) => {
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -57,7 +57,7 @@ const pokemon = (props) => {
         </button>
       </div>
       <div>
-        <FilterType isVisible={isMenuOpen} onClose={closeMenu}/>
+        <FilterType isVisible={isMenuOpen} onClose={closeMenu} />
         <FilterTypemd />
       </div>
       <div className="containercard">
