@@ -30,6 +30,8 @@ const pokemon = (props) => {
 
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [type, setTypefilter] = useState('');
+
 
   const openMenu = useCallback(() => {
     setIsMenuOpen(true)
@@ -39,10 +41,8 @@ const pokemon = (props) => {
     setIsMenuOpen(false)
   }, []);
 
-  const typefilter = (item) => {
-    console.log(item);
-    
-  };
+  console.log(type);
+  
 
   return(
     <>
@@ -62,8 +62,8 @@ const pokemon = (props) => {
         </button>
       </div>
       <div>
-        <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={typefilter} />
-        <FilterTypemd setTypeButton={typefilter}/>
+        <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={setTypefilter} />
+        <FilterTypemd setTypeButton={setTypefilter}/>
       </div>
       <div className="containercard">
         {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (

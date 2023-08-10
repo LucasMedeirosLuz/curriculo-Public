@@ -10,7 +10,7 @@ const josefin_sans = Josefin_Sans({
 export const Header = () => {
   return (
     <header className={`${josefin_sans.className}
-      bg-l-blue-5 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20`
+      bg-l-blue-5 text-sm flex py-3 px-5 justify-center content-center items-center sticky top-0 z-20`
     }>
       <nav className="flex items-center gap-4 md:gap-10 text-md md:text-xl">
         <Link href="/">Sobre mim</Link>
