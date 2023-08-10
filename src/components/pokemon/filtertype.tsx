@@ -1,5 +1,4 @@
 import { TypeIcon } from "../icons/typesmenu";
-import React, {useState} from "react";
 
 interface MenuProps {
   isVisible: boolean;

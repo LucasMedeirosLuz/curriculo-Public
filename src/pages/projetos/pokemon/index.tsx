@@ -63,7 +63,7 @@ const pokemon = (props) => {
       </div>
       <div>
         <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={typefilter} />
-        <FilterTypemd />
+        <FilterTypemd setTypeButton={typefilter}/>
       </div>
       <div className="containercard">
         {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
