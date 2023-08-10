@@ -15,12 +15,6 @@ const nextConfig = {
         port: '',
         pathname: '/u/**',
       },
-      // {
-      //   protocol: 'https',
-      //   hostname: 'cdn.traction.one',
-      //   port: '',
-      //   pathname: '/pokedex/**',
-      // },
     ],
   },
 }
