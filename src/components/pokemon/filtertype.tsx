@@ -22,10 +22,10 @@ const FilterType = ({isVisible, onClose, setTypeButton}: MenuProps) => {
 
   return (
     <div className={`${isVisible ? 'flex' : 'hidden'}
-      fixed absolute inset-0 w-full h-full mt-[71px] md:hidden
+      fixed absolute inset-0 w-full h-full mt-[62px] md:hidden
      `}
     >
-    <div className="w-full bg-l-blue-5 h-56 shadow-md py-4 px-5">
+    <div className="w-full bg-l-blue-5 h-70 shadow-md py-4 px-5">
       <button onClick={onClose}>
         <TypeIcon />
       </button>
