@@ -39,6 +39,11 @@ const pokemon = (props) => {
     setIsMenuOpen(false)
   }, []);
 
+  const typefilter = (item) => {
+    console.log(item);
+    
+  };
+
   return(
     <>
     <Head>
@@ -57,7 +62,7 @@ const pokemon = (props) => {
         </button>
       </div>
       <div>
-        <FilterType isVisible={isMenuOpen} onClose={closeMenu} />
+        <FilterType isVisible={isMenuOpen} onClose={closeMenu} setTypeButton={typefilter} />
         <FilterTypemd />
       </div>
       <div className="containercard">
