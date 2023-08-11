@@ -32,10 +32,10 @@ const Contatos = () => {
         <li>
           <span className="font-bold">Linkedin</span>
           <div className="flex gap-1 md:gap-3 item-center">
-            <a href="https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/"
+            <a href="https://www.linkedin.com/in/lucas-de-medeiros-luz/"
               className="text-sm md:text-lg underline trucate"
             >
-              https://www.linkedin.com/in/lucas-de-medeiros-luz-33b85422b/
+              https://www.linkedin.com/in/lucas-de-medeiros-luz/
             </a>
           </div>
         </li>
