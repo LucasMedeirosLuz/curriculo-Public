@@ -55,7 +55,7 @@ const pokemon = (props) => {
       const data = await res.json();
       takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
 
-      types = takeId.filter((item) => item < 251);
+      types = takeId.filter((item) => item <= 251);
 
       const filter = data.pokemon.slice(0,types.length);
 
