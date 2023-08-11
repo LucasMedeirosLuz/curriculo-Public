@@ -31,7 +31,9 @@ const pokemon = (props) => {
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [type, setType] = useState(0);
-  const [idFilterType, setIsFilterType] = useState([]);
+  const [idFilterType, setIsFilterType] = useState(
+    [{pokemon:'', id: NaN, name: String}]
+  );
 
 
 
@@ -46,7 +48,6 @@ const pokemon = (props) => {
   setTimeout(async function(){
     let takeId = [];
     let types = [];
-    let filter = [];
     // let final = [];
 
     if (type > 0) {
@@ -56,7 +57,7 @@ const pokemon = (props) => {
 
       types = takeId.filter((item) => item < 251);
 
-      filter = data.pokemon.slice(0,types.length);
+      const filter = data.pokemon.slice(0,types.length);
 
       filter.forEach((item, index) => item.pokemon.id = types[index]);
 
@@ -64,7 +65,6 @@ const pokemon = (props) => {
 
     };
     
-    setIsFilterType(filter);
   }, 100);
 
   // setTimeout(() => {
