@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,6 +35,9 @@ export const getStaticProps = async(context) => {
 const Sobre = ({pokemon}) => {
   return (
     <>
+    <Head>
+      <title>{`Sobre ${pokemon.name} | LucasMLuz`}</title>
+    </Head>
     <div className="flex justify-center content-center text-3xl md:text-5xl my-12 capitalize">
       <h1>{`${pokemon.name}`}</h1>
     </div>
