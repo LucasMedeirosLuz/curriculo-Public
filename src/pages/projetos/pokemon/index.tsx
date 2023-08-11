@@ -15,7 +15,7 @@ export async function getStaticProps() {
   const res = await fetch(`${api}/?limit=${maxPokemons}`)
   const data = await res.json()
 
-  data.results.forEach((item: { id: any; }, index: number) => {
+  data.results.forEach((item, index) => {
     item.id = index + 1
   })
 
@@ -30,8 +30,8 @@ const pokemon = (props) => {
 
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [type, setType] = useState('');
-  const [idFilterType, setIsFilterType] = useState('');
+  const [type, setType] = useState(0);
+  const [idFilterType, setIsFilterType] = useState([]);
 
 
 
@@ -43,37 +43,33 @@ const pokemon = (props) => {
     setIsMenuOpen(false)
   }, []);
 
-  const filterType = async() => {
-
-    const res = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
-    const data = await res.json();
-
+  setTimeout(async function(){
     let takeId = [];
-    var filter = [];
+    let types = [];
+    let filter = [];
+    // let final = [];
 
-    if (type !== '') {
+    if (type > 0) {
+      const res = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
+      const data = await res.json();
       takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
-      filter = takeId.filter((item) => item < 251);;
-    }
 
-    // const filter = takeId.filter((item) => item < 251);
+      types = takeId.filter((item) => item < 251);
+
+      filter = data.pokemon.slice(0,types.length);
+
+      filter.forEach((item, index) => item.pokemon.id = types[index]);
+
+      setIsFilterType(filter);
+
+    };
     
-    // const takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
+    setIsFilterType(filter);
+  }, 100);
 
-    // const filter = takeId.filter((item) => item < 251)
-
-    console.log(filter);
-    
-
-    // console.log(filter.filter((um) => um == props.pokemons.map().id))
-    console.log(props.pokemons);
-    
-    
-    return filter;  
-  };
-
-  const ola = filterType();
-  
+  // setTimeout(() => {
+  //   setIsFilterType(filter);
+  // }, 3000);
 
   return(
     <>
@@ -97,9 +93,12 @@ const pokemon = (props) => {
         <FilterTypemd setTypeButton={setType}/>
       </div>
       <div className="containercard">
-        {props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) => (
-          <Card key={pokemon.id} pokemon={pokemon} />
-        ))}
+        { type == 0 &&
+           props.pokemons.filter((item) => item.name.toLowerCase().includes(result.toLowerCase())).map((pokemon) =>
+            <Card key={pokemon.id} pokemon={pokemon} />
+            ) ||
+            idFilterType.map((item, i) => (<Card key={i} pokemon={item.pokemon} />))
+        }
       </div>
     </div>
     </>
