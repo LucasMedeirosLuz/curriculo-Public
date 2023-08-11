@@ -1,7 +1,7 @@
-<h1>
+<h3>
 Um simples curriculo onde mostro um pouco do que eu sei.
-</h1>
+</h3>
 
-<a>
+<a href='https://lucasmedeirosluz.github.io/curriculo-Public/'>
 https://lucasmedeirosluz.github.io/curriculo-Public/
 </a>
