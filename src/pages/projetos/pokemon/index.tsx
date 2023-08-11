@@ -31,6 +31,8 @@ const pokemon = (props) => {
   const [result, setResult] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [type, setType] = useState('');
+  const [idFilterType, setIsFilterType] = useState('');
+
 
 
   const openMenu = useCallback(() => {
@@ -46,27 +48,31 @@ const pokemon = (props) => {
     const res = await fetch(`https://pokeapi.co/api/v2/type/${type}`);
     const data = await res.json();
 
-    console.log(data);
-
     let takeId = [];
-    let filter = [];
-    
+    var filter = [];
 
     if (type !== '') {
       takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
-      filter = takeId.filter((item) => item < 251);
+      filter = takeId.filter((item) => item < 251);;
     }
-    
 
+    // const filter = takeId.filter((item) => item < 251);
+    
     // const takeId = data.pokemon.map((item) => item.pokemon.url.substr(-6).replace(/\D+/g, ''));
 
     // const filter = takeId.filter((item) => item < 251)
-    
+
     console.log(filter);
     
+
+    // console.log(filter.filter((um) => um == props.pokemons.map().id))
+    console.log(props.pokemons);
+    
+    
+    return filter;  
   };
 
-  filterType();
+  const ola = filterType();
   
 
   return(
