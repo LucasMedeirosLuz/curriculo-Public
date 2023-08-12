@@ -2,7 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 const button = () => {
-  console.log('Ola')
+  
 }
 
 const loginPage = () => {
@@ -14,7 +14,7 @@ const loginPage = () => {
     <main>
       <div>
       <Link 
-        href="/"
+        href="/projetos"
         className="Link"
         >
          Volta
