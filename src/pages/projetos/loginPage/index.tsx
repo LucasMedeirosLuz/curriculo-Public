@@ -8,13 +8,15 @@ const button = () => {
 
 const loginPage = () => {
   return (
-    <div className={`${'test'} flex justify-center items-center`}>
+    <div className={`${'test'} flex justify-center items-center `}>
     <Head>
       <title>Pagina de Login | LucasMLuz</title>
     </Head>
     <main className={`flex justify-center items-center flex-col md:flex-row`}> 
-      <div className="mb-10 flex justify-center items-center flex-col">
-        <h1>Bem Vindo ao melhor site <br /> de streme do Brasil</h1>
+      <div className="w-[70vw] md:w-[49vw] md:h-[100vh] mb-10 md:mb-0 flex justify-center items-center flex-col">
+        <h1
+          className="text-2xl italic text-l-yellow-1 font-bold"
+        >Bem Vindo ao melhor site <br /> de streme do Brasil</h1>
         <Image
         src="https://raw.githubusercontent.com/LucasMedeirosLuz/curriculo-Public/38b9e47acc9997683eabe040ce6bd8aef579a98a/public/popcor.svg"
         width={300}
@@ -23,38 +25,35 @@ const loginPage = () => {
         className="md:w-[600px] md:h-[600]"
         />
       </div>
-      <div className={`w-[70vw] md:w-[50vw] flex justify-center content-center items-center flex-col`}>
+      <div className="w-[99vw] md:w-[49vw] mb-10 md:mb-0 flex justify-center items-center flex-col">
+        <div className="w-[80%] md:w-[70%] md:py-10 flex justify-center items-center flex-col bg-l-purple-3 rounded-xl">
+        <h3
+          className="font-bold text-2xl text-l-yellow-1 p-5"
+        >Login</h3>
         <input
           type="text"
           id="Email"
           name="Email"
           placeholder="Email"
-          className="p-[3px] my-3 "
+          className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
         />
         <input 
           type="password" 
           id="senhaLogin" 
           name="password"
           placeholder="Senha"
-          className="p-[3px] my-3"
+          className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
         />
         <button
-          className="bg-l-yellow-4 text-black rounded-md p-1 w-20 my-3"
+          className="bg-l-yellow-2 text-black rounded-md p-1 w-20 my-3 font-bold"
           type="button"
           onClick={ button }
           disabled={ !button }
         >
           Entrar
         </button>
+        </div>
       </div>
-      {/* <div>
-      <Link 
-        href="/projetos"
-        className=""
-        >
-         Volta
-        </Link>
-      </div> */}
     </main>
     </div>
   )
