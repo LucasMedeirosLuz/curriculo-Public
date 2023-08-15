@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
-        <link rel="icon" href="/luz.png" />
+        <link rel="icon" href="https://raw.githubusercontent.com/LucasMedeirosLuz/curriculo-Public/main/public/luz.png" />
       </Head>
       <body>
         <Main />

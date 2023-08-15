@@ -20,7 +20,7 @@ const loginPage = () => {
         width={300}
         height={300}
         alt='imagem de um balde de pipoca'
-        className=""
+        className="md:w-[600px] md:h-[600]"
         />
       </div>
       <div className={`w-[70vw] md:w-[50vw] flex justify-center content-center items-center flex-col`}>
