@@ -1,6 +1,5 @@
-import Link from "next/link";
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
 
 const button = () => {
   
@@ -15,10 +14,8 @@ const loginPage = () => {
     <main className={`flex justify-center items-center flex-col md:flex-row`}> 
       <div className="mb-10 flex justify-center items-center flex-col">
         <h1>Bem Vindo ao melhor site <br /> de streme do Brasil</h1>
-        <Image
-        src="/popcor.svg"
-        width={300}
-        height={300}
+        <img
+        src="https://github.com/LucasMedeirosLuz/curriculo-Public/blob/cb2892921d6d7cac7a455411f18309ceeeb3de35/public/popcor.svg"
         alt='imagem de um balde de pipoca'
         className=""
         />
@@ -29,14 +26,14 @@ const loginPage = () => {
           id="Email"
           name="Email"
           placeholder="Email"
-          className={`p-[3px] my-3`}
+          className="p-[3px] my-3 "
         />
         <input 
           type="password" 
           id="senhaLogin" 
           name="password"
           placeholder="Senha"
-          className={`p-[3px] my-3`}
+          className="p-[3px] my-3"
         />
         <button
           className="bg-l-yellow-4 text-black rounded-md p-1 w-20 my-3"
