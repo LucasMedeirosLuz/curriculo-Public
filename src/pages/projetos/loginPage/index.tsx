@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const loginPage = () => {
 
@@ -13,11 +14,11 @@ const loginPage = () => {
     
       if (email.match(validRegex) && senha.length >= 8) {
         // alert("email foi");
-        window.location.href = "../projetos/loginPage/filmes" ;
+        // window.location.href = "curriculo-Public/projetos/loginPage/filmes" ;
 
       } else {
 
-        alert("Email ou senha invalido, lembrando a senha tem de ter no minimo 8 caracteres.");
+        alert("Email ou senha invalido. A senha tem de ter no minimo 8 caracteres.");
           
       }
     
@@ -65,13 +66,14 @@ const loginPage = () => {
           className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
           required
         />
-        <button
-          className="bg-l-yellow-2 text-black rounded-md p-1 w-20 my-3 font-bold"
+        <Link
+          className="bg-l-yellow-2 text-black rounded-md p-1 w-20 my-3 font-bold flex justify-center items-center"
           type="button"
           onClick={ verifyLogin }
+          href="/projetos/loginPage/filmes"
         >
           Entrar
-        </button>
+        </Link>
         </form>
       </div>
     </main>
