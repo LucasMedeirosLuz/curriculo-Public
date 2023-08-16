@@ -44,10 +44,10 @@ const AboutMe = () => {
           width={300}
           height={300}
           unoptimized
-          className="rounded-full"
+          className="rounded-full md:w-[500px] md:h-[500px]"
         />
-        <p className="p-4 w-fit text-base leading-tight bg-l-blue-2 rounded-xl text-black absolute -bottom-[0.75rem] sm:botton-3">
-          <strong className="text-3xl">0</strong>
+        <p className="p-4 w-fit text-base md:text-2xl leading-tight bg-l-blue-2 rounded-xl text-black absolute -bottom-[0.75rem] md:w-[250px] md:h-[150px]">
+          <strong className="text-3xl md:text-5xl">0</strong>
           <br />
           Anos de experiência.
         </p>
