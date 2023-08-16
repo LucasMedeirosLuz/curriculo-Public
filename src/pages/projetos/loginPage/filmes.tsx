@@ -9,7 +9,7 @@ const filmePage = () => {
     </Head>
     <main>
       <h1>Filmes</h1>
-      <Link className="Link" href="/loginPage">voltar</Link>
+      <Link className="Link" href="/projetos/loginPage">voltar</Link>
     </main>
     </>
   )

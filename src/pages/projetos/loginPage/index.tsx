@@ -2,11 +2,34 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
-const button = () => {
-  
-}
-
 const loginPage = () => {
+
+  function verifyLogin() {
+    const email = (document.getElementById('email') as HTMLInputElement).value;
+    const senha = (document.getElementById('senha') as HTMLInputElement).value;
+
+    function ValidateEmail(email, senha) {
+
+      var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    
+      if (email.match(validRegex) && senha.length >= 8) {
+        // alert("email foi");
+        return true;
+    
+      } else {
+    
+        alert("Email ou senha invalido, lembrando a senha tem de ter no minimo 8 caracteres.");
+    
+        return false;
+    
+      }
+    
+    }
+
+    console.log(ValidateEmail(email, senha));
+    
+  }
+
   return (
     <div className={`${'test'} flex justify-center items-center `}>
     <Head>
@@ -26,33 +49,34 @@ const loginPage = () => {
         />
       </div>
       <div className="w-[99vw] md:w-[49vw] mb-10 md:mb-0 flex justify-center items-center flex-col">
-        <div className="w-[80%] md:w-[70%] md:py-10 flex justify-center items-center flex-col bg-l-purple-3 rounded-xl">
+        <form className="w-[80%] md:w-[70%] md:py-10 flex justify-center items-center flex-col bg-l-purple-3 rounded-xl">
         <h3
           className="font-bold text-2xl text-l-yellow-1 p-5"
         >Login</h3>
         <input
           type="text"
-          id="Email"
+          id="email"
           name="Email"
           placeholder="Email"
           className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
+          required
         />
         <input 
           type="password" 
-          id="senhaLogin" 
+          id="senha" 
           name="password"
           placeholder="Senha"
           className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
+          required
         />
         <button
           className="bg-l-yellow-2 text-black rounded-md p-1 w-20 my-3 font-bold"
           type="button"
-          onClick={ button }
-          disabled={ !button }
+          onClick={ verifyLogin }
         >
           Entrar
         </button>
-        </div>
+        </form>
       </div>
     </main>
     </div>
