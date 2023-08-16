@@ -19,7 +19,7 @@ const AboutMe = () => {
         </h1>
         <div className="mb-12">
         <h2 className={`${josefin_sans} mb-12`}>
-          Sou um desenvolvedor Front-end, e amo estudar programação.
+          Sou um desenvolvedor Front-end, e gosto de estudar e aprender novas tecnologias, estou atualmente estudando back-end || MySQL || PHP.
         </h2>
         </div>
       <ul className="flex flex-wrap justify-center xl:grid-cols-2 xl:w-fit gap-3 text-xl">
