@@ -13,14 +13,12 @@ const loginPage = () => {
     
       if (email.match(validRegex) && senha.length >= 8) {
         // alert("email foi");
-        window.location.href = "/projetos/loginPage/filmes" ;
-        return true;
+        window.location.href = "../projetos/loginPage/filmes" ;
+
       } else {
-    
+
         alert("Email ou senha invalido, lembrando a senha tem de ter no minimo 8 caracteres.");
-    
-        return false;
-    
+          
       }
     
     }
