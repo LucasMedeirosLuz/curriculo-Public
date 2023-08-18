@@ -14,12 +14,15 @@ const loginPage = () => {
     
       if (email.match(validRegex) && senha.length >= 8) {
         // alert("email foi");
-        // window.location.href = "curriculo-Public/projetos/loginPage/filmes" ;
-
+        const url_atual = window.location.href;
+        console.log(url_atual);
+        
+        window.location.href = `${url_atual}/filmes` ;
+        return true
       } else {
 
         alert("Email ou senha invalido. A senha tem de ter no minimo 8 caracteres.");
-          
+        return false;
       }
     
     }
@@ -66,14 +69,13 @@ const loginPage = () => {
           className="p-[3px] my-3 w-[75%] max-w-[400px] text-black rounded-xl"
           required
         />
-        <Link
+        <button
           className="bg-l-yellow-2 text-black rounded-md p-1 w-20 my-3 font-bold flex justify-center items-center"
           type="button"
           onClick={ verifyLogin }
-          href="/projetos/loginPage/filmes"
         >
           Entrar
-        </Link>
+        </button>
         </form>
       </div>
     </main>
